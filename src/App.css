@@ -1,8 +1,30 @@
 .App {
   text-align: center;
+  
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+.character-name {
+  background-color: white;
+  width: 90%;
+  height: 100%;
+  border-radius: 8px;
+}
+.character-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
