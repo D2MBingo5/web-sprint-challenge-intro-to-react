@@ -7,7 +7,7 @@ const Character = props => {
     
     return (
         <div className='character-container'>
-            <CharacterHeader characterName={character.name}/>
+            <CharacterHeader characterName={character}/>
         </div>
     );
 };

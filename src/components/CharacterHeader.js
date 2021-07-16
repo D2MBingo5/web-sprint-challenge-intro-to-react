@@ -7,9 +7,9 @@ const CharacterHeader = (props) => {
  const { characterName } = props;
 
  return (
-    <div className='character-name'>
-        <h2>{characterName}</h2>
-    </div>
+    <h2 className='character-name'>
+        {characterName}
+    </h2>
  );
 };
 

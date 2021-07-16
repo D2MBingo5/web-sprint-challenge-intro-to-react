@@ -6,7 +6,7 @@ const Characters = (props) => {
 
     return(
         <div>
-            {characters.map( character => <Character key={character} character={character.name}/>)}
+            {characters ? characters.map( character => <Character key={character.name} character={character.name}/>) : null}
         </div>
     )
 }
