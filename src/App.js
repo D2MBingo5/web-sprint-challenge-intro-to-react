@@ -5,6 +5,8 @@ import axios from 'axios'
 
 import Characters from './components/Characters'
 
+import styled from 'styled-components'
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -32,13 +34,23 @@ const App = () => {
       .finally(console.log('api call done')) // For good measure
   }, [])
 
-  console.log(characters, 'test from App.js')
+  // console.log(characters, 'test from App.js') // A test performed to see where exactly my api pull is logging from
+
+  //Styling
+  const DivApp = styled.div`
+    text-align: center;
+  `
+  const H1Header = styled.h1`
+    color: #443e3e;
+    text-shadow: 1px 1px 5px #fff;
+  `
+  // styled-components rocks, very fun to use
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
+    <DivApp>
+      <H1Header>Characters</H1Header>
       <Characters characters={characters}/>
-    </div>
+    </DivApp>
   );
 }
 
