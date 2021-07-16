@@ -3,6 +3,8 @@ import './App.css';
 
 import axios from 'axios'
 
+import Characters from './components/Characters'
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -14,16 +16,19 @@ const App = () => {
     // api call
     axios.get(`https://swapi.dev/api/people`)
       .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         setCharacters(res.data)
       })
       .catch(err => console.log(err)) // Handling promise rejection
       .finally(console.log('api call done'))
   }, [])
 
+  console.log(characters, 'test from App.js')
+
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <Characters characters={characters.name}/>
     </div>
   );
 }
